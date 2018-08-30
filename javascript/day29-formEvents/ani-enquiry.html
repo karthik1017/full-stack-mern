@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Enquiry Form</title>
+</head>
+
+<body>
+    <h2>Enquiry Form</h2>
+
+    <form id="enquiryForm" action="./index.html">
+
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" /> 
+        <span id="nameError"></span>
+        <br/>
+
+        <label for="mobile">Mobile</label>
+        <input type="text" name="mobile" id="mobile" />
+        <span id="mobileError"></span>
+        <br/>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" />
+        <br/>
+
+        <!-- 
+            <label>DoB</label>
+            <input type="date" name="dob" />
+            <br/> 
+        -->
+
+        <label>Gender</label>
+
+        <input type="radio" name="gender" value="male" id="male" />
+        <label for="male">Male</label>
+
+        <input type="radio" name="gender" value="female" id="female" />
+        <label for="female">Female</label>
+        <br/>
+
+        <label for="languages">Languages</label>
+        <select name="languages" id="languages">
+            <option value="">Select</option>
+            <option value="js">JavaScript</option>
+            <option value="py">Python</option>
+            <option value="rb">Ruby</option>
+        </select>
+        <br/>
+
+        <label for="courses">Courses</label>
+        <select name="courses" id="courses">
+            <option value="">Select</option>
+            <option value="mern">MERN</option>
+            <option value="react">React</option>
+            <option value="node">Node</option>
+            <option value="django">Python + Django</option>
+            <option value="ror">Ruby On Rails</option>
+        </select>
+        <br/>
+
+        <label>Preference</label>
+        <input type="radio" name="preference" value="weekdays" id="weekdays" />
+        <label for="weekdays"> Weekdays </label>
+        <input type="radio" name="preference" value="weekends" id="weekends" />
+        <label for="weekends"> Weekends </label>
+        <br/>
+
+        <label for="experience">Experience</label>
+        <input type="number" name="experience" min="0" max="15" id="experience" />
+        <br/>
+
+        <label for="about">Tell us about yourself</label>
+        <textarea name="about" id="about"> </textarea>
+        <br/>
+
+        <input type="checkbox" name="permission" id="permission" />
+        <label for="permission">I grant permission to contact me</label>
+        <br/>
+
+        <input type="submit" value="submit enquiry form" />
+    </form>
+
+    <script>
+        var formHandle = document.getElementById('enquiryForm');
+
+        var nameHandle = document.getElementById('name');
+        var nameErrorHandle = document.getElementById('nameError'); 
+
+        var mobileHandle = document.getElementById('mobile'); // refers to input type 
+        var mobileErrorHandle = document.querySelector('#mobileError');  // refers to span tag
+
+        var hasErrors = {
+            name: true,
+            mobile: true
+        }
+
+        function validateName() {
+            if(nameHandle.value == '') {
+                nameErrorHandle.innerHTML = 'can not be empty';
+                hasErrors.name = true; 
+            } else {
+                nameErrorHandle.innerHTML = '';
+                hasErrors.name = false; 
+            }
+        }
+
+        function validateMobile(){
+            if(mobileHandle.value === ''){
+                mobileErrorHandle.innerHTML = 'can not be empty';
+                hasErrors.mobile = true; 
+            } else if(mobileHandle.value.length !== 10) {
+                mobileErrorHandle.innerHTML = 'should be 10 digits';
+                hasErrors.mobile = true; 
+            } else {
+                mobileErrorHandle.innerHTML = '';
+                hasErrors.mobile = false; 
+            }
+        }
+
+        // nameHandle.addEventListener('blur', validateName , false); 
+
+        formHandle.addEventListener('submit', function(e){
+            
+            validateName(); 
+            validateMobile(); 
+
+            if(Object.values(hasErrors).includes(true)) {
+                e.preventDefault(); 
+            }
+
+        }, false); 
+    </script>
+</body>
+
+</html>

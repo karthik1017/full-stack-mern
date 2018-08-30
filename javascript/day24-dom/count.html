@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>count using dom</title>
+</head>
+<body>
+    <h1 id='name'>Count:</h1><br/>
+    <h2 id='count'>0</h2><br/>
+    <button id = 'up'>up</button>
+    <button id = 'down'>down</button>
+    <script>
+    var button1 = document.getElementById('up');
+    var button2 = document.getElementById('down');
+    var count = document.getElementById('count');
+    button1.addEventListener('click',function(){
+        count.innerHTML = parseInt(count.innerHTML);
+        count.innerHTML++;  
+    },false);
+    button2.addEventListener('click',function(){
+        if(!(parseInt(count.innerHTML) === 0)){
+            count.innerHTML = parseInt(count.innerHTML);
+            count.innerHTML--;
+        }
+    },false);
+    </script>
+</body>
+</html>

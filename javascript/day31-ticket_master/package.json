@@ -1,0 +1,14 @@
+{
+  "name": "day31-ticket_master",
+  "version": "1.0.0",
+  "description": "",
+  "main": "axios.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "karthik",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Transform string</title>
+</head>
+<body>
+    <!-- h2 is a tag ,id is an attribute -->
+    <h2  id = 'name'>karthik</h2>
+    <button id = 'nameBtn'>click me!!</button>
+
+    <script>
+        //console.log(document);
+        var nameHandle = document.getElementById('name');
+        var nameBtnHandle = document.getElementById('nameBtn');
+
+        var nameBtnHandle1 = document.getElementById('nameBtn1');
+        var nameHandle1 = document.getElementById('city');
+
+        // for our reference to see what the variable holds
+        console.log(nameHandle);
+        console.log(typeof nameHandle);
+        console.log(nameHandle.innerHTML.toUpperCase());
+
+        //for our reference to see what the variable holds
+        console.log(nameBtnHandle);
+        console.log(typeof nameBtnHandle);
+        console.log(nameBtnHandle.innerHTML);
+
+        //Event handler
+        var flag = false;
+        nameBtnHandle.addEventListener('click', function(){
+        var presentText = nameHandle.innerHTML;
+        if(flag === false)
+        {
+          var transformedText = presentText.toUpperCase();
+          nameHandle.innerHTML = transformedText;
+          flag = true;
+        }
+        else if(flag === true)
+        {
+          var transformedText = presentText.toLowerCase();
+          nameHandle.innerHTML = transformedText;
+          flag = false;
+        }
+        // nameHandle.innerHTML = nameHandle.innerHTML.toUpperCase();
+        },false);
+    </script>
+</body>
+</html>

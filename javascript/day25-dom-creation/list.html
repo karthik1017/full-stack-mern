@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Table</title>
+</head>
+<body>
+   <div id="app">
+
+   </div>
+   <script>
+       var appHandle = document.getElementById('app');
+
+       var links = [{
+                title: 'Website',
+                url: 'http://www.dctacademy.com'
+            },
+            {
+                title: 'Facebook',
+                url: 'http://facebook.com/dctacademy.bangalore'
+            },
+            {
+                title: 'github',
+                url: 'http://github.com/dctacademy'
+            }];
+
+        var list = document.createElement('ul');
+        
+        for(var i = 0; i < links.length; i++)
+        {   
+            var li = document.createElement('li');
+            //var tableData2 = document.createElement('td');
+            var link = document.createElement('a');
+            link.setAttribute('href',links[i].url);
+            link.appendChild(data1);
+            li.appendChild(link);
+        }
+        appHandle.appendChild(list);
+        
+        console.log(tableHandle);
+   </script>
+</body>
+</html>

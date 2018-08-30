@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id = 'name'>js, rb, node, py, php</h2>
+    <button id = 'btn'>click me to split</button>
+    <h2 id = 'result'>result appears here</h2>
+    <script>
+        var ele = document.getElementById('name');
+        var btn = document.getElementById('btn');
+        var ele1 = document.getElementById('result');
+        var array = ele.innerHTML.split(', ');
+        
+        console.log(array);
+        btn.addEventListener('click',function(){
+          ele1.innerHTML = `[${array}]`;
+        },false);
+    </script>
+</body>
+</html>

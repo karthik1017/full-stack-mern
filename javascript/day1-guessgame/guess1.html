@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>guess game</title>
+    </head>
+    <body>
+        <script>
+           var name=prompt('enter ur name');
+           console.log('welcome to the guess game ' + name );
+           var targetNumber=Math.ceil(Math.random()*100);
+           var maxGuess=10;
+           var max=100;
+           var guess=1;
+           var min=1;
+           console.log(targetNumber);
+           for(var i=0;i<maxGuess;i++)
+           {   
+               console.log('your current guess is ',i)
+               console.log('guess from ',min,' to ',max);
+               var guess=prompt('guess my number');
+               if(guess<targetNumber)
+               {
+                   console.log('your guess was low');
+                   min=guess;
+               }
+               else if(guess>targetNumber)
+               {
+                   console.log('your guess was high');
+                   max=guess;
+               }
+               else{
+                   console.log('congrats '+ name + ' guess is correct ');
+                   console.log('you took ',i+1,' number of choices');
+                   break;
+               }
+           }
+           if(count===10)
+               {
+                   console.log('you have reached your max number of guesses');
+               }
+        </script>
+    </body>

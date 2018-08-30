@@ -1,0 +1,14 @@
+{
+  "name": "day21-http-methods-post",
+  "version": "1.0.0",
+  "description": "http put method",
+  "main": "contact.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "karthik",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}

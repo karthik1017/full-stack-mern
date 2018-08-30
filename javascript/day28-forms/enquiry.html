@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <body>
+        <h2>Enquiry Form</h2>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+            <label id='lb1'></label>
+            <br/>
+
+            <label for="mobile">mobile</label>
+            <input type="text" name="mobile" id='mobile'>
+            <label id='lb2'></label>
+            <br/>
+
+            <lable for="email">email</lable>
+            <input type="text" name="email" id='email'>
+            <br/>
+
+            <label for="lang">languges</label>
+            <select name="languges" id="lang">
+               <option value="">select</option>
+               <option value="py">python</option>
+               <option value="js">javascript</option>
+               <option value="rb">ruby</option>
+            </select>
+            <br/>
+
+            <label for="course">courses</label>
+            <select name="courses" id="course">
+                <option value="">select</option>
+            </select>
+            <br/>
+
+            <lable>preference</lable>
+            <br/>
+            <input type="radio" name="preference" value="weekdays" id='weekdays'><label for="weekdays">weekdays</label>
+            <input type="radio" name="preference" value="weekends" id='weekends'><lable for="weekends">weekends</lable>
+            <br/>
+            
+            <label for="exp">experience</label>
+            <input type="number" name="experience" id='exp'>
+            <br/>
+
+            <label for="area">tell about yourself</label>
+            <textarea name="textarea" id='area'></textarea>
+            <br/>
+            
+            <input type="checkbox" name="contact" value="true" id='check'>
+            <label for="check">permission to contact me</label>  
+            <br/>
+
+            <input type="submit" value="click to submit" id='btn1'><br/>
+            <input type="reset" value="click to reset" id='btn2'><br/>
+        </form>
+        <script src ="./js/courses.js"></script>
+    </body>
+</html>
